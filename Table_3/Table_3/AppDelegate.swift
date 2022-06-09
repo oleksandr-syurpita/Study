@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Table_3
 //
-//  Created by admin on 17.05.2022.
+//  Created by admin on 26.05.2022.
 //
 
 import UIKit

@@ -58,4 +58,5 @@ class CellAlarm: UITableViewCell {
         self.contentView.addSubview(switcher)
     }
     
+    
 }

@@ -2,44 +2,64 @@
 //  ViewController.swift
 //  Table_3
 //
-//  Created by admin on 17.05.2022.
+//  Created by admin on 26.05.2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
-   
-    let word = ["x","z","q","ad","asda"]
+class ViewController: UITableViewController, CarNameDelegate {
+ 
+    
+
+     var arrName: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let table = UITableView.init(frame: CGRect.init(x: self.view.frame.width * 0.1, y: self.view.frame.height * 0.1, width: self.view.frame.width * 0.8 , height: self.view.frame.height * 0.8))
-        table.dataSource = self
-        self.view.addSubview(table)
-        
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return word.count
+        self.view.backgroundColor = .red
+        self.setNaviganion()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let ideficator = "my cell"
-        var cell = tableView.dequeueReusableCell(withIdentifier: ideficator)
-        
-        if cell == nil {
-            cell = UITableViewCell.init(style: .value2, reuseIdentifier: ideficator)
-            
-        }
-        let words = word[indexPath.row]
-        cell?.textLabel?.text = words
-        cell?.detailTextLabel?.text = "ok ok ok"
-        
-        return cell!
-        
     }
 
+extension ViewController {
+    
+    func setNaviganion() {
+        self.navigationItem.title = "Car name is"
+        let add = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(createdAdd))
+        self.navigationItem.rightBarButtonItem = add
+        
+    }
+    
+    @objc func createdAdd() {
+        let carName = CarName()
+        carName.mydelegate = self
+        navigationController?.pushViewController(carName, animated: true)
+         
+    }
+    func getName(name: String) {
+        print(name)
+        arrName.append(name)
+        self.tableView.reloadData()
+        
+    }
+}
+
+extension ViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrName.count
+        
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let index = "index"
+        var cell = tableView.dequeueReusableCell(withIdentifier: index)
+        if cell == nil {
+            cell = UITableViewCell.init(style: .value1, reuseIdentifier: index)
+        }
+        
+        let arr = arrName[indexPath.row]
+        cell?.textLabel?.text = arr
+        
+        return cell!
+    }
 }
 
