@@ -22,23 +22,6 @@ struct DatePickerView: View {
             height: UIScreen.main.bounds.height
         )
         .background(Color.green.opacity(0.5))
-        .toolbar(content: {
-            ToolbarItem(placement: .navigationBarLeading) {
-                
-//                Button(action: {}, label: {
-//                    Image.backButton
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: .genericFrame, height: .genericFrame)
-//                })
-            }
-            
-//            ToolbarItem(placement: .principal) {
-//                Text("settings")
-//                    .font(.montserratFontMapping(ofSize: .genericFrame, weight: .bold))
-//                    .foregroundColor(.white)
-//            }
-        })
     }
 }
 
