@@ -11,16 +11,18 @@ struct TwoScreen: View {
     @Binding var MoveToSecondScreen: Bool
     @State var MoveToLastScreen = false
     var body: some View {
-        Text("Welcome to newx screen")
-        Button(action: {self.MoveToLastScreen = true}) {
-            Text("go next")
+        VStack {
+            Text("Welcome to newx screen")
+            Button(action: {self.MoveToLastScreen = true}) {
+                Text("go next")
+            }
+            NavigationLink(destination: ThreeScreen(MoveToSecondScreen: $MoveToSecondScreen), isActive: $MoveToLastScreen){}
         }
-        NavigationLink(destination: ThreeScreen(MoveToSecondScreen: $MoveToSecondScreen), isActive: $MoveToLastScreen){}
     }
 }
 
 struct TwoScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TwoScreen(MoveToSecondScreen: .constant(false))
+        TwoScreen(MoveToSecondScreen: .constant(true))
     }
 }

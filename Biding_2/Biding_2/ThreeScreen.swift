@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ThreeScreen: View {
     @Binding var MoveToSecondScreen: Bool
-
+//    @Binding var moveToFirstScreen: Bool
     var body: some View {
         Button(action: {MoveToSecondScreen = false}) {
             Text("back")
