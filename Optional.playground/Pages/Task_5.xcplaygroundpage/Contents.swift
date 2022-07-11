@@ -8,18 +8,10 @@ func functionTask_5_10(n:Int) -> Double {
     
     let y = 8 + n * 3 + n * 2 / 20
     return Double(y)
-    
+    //10 Розрахуйте y= 8+n3 +n2 /20, где n- довільне ціле число, що вводиться з клавіатури;
+
 }
 functionTask_5_10(n: 1)
-//10 Розрахуйте y= 8+n3 +n2 /20, где n- довільне ціле число, що вводиться з клавіатури;
-
-func functionTask_5_8(n: Int) -> Double {
-    guard n > 0 else { return 0 }
-//    8 Розрахуйте y=n3(n−1)(2n+1)/30, где n- довільне ціле число, що вводиться з клавіатури;
-    
-    let y = (n * 3 * (n - 1) * (2 * n + 1)) / 30
-    return Double(y)
-}
 
 func functionTask_5_9(n: Int) -> Double {
 //    9 дивись прикріплений скріншот
@@ -29,6 +21,14 @@ func functionTask_5_9(n: Int) -> Double {
 }
 
 functionTask_5_9(n: 2)
+
+func functionTask_5_8(n: Int) -> Double {
+    guard n > 0 else { return 0 }
+//    8 Розрахуйте y=n3(n−1)(2n+1)/30, где n- довільне ціле число, що вводиться з клавіатури;
+    
+    let y = (n * 3 * (n - 1) * (2 * n + 1)) / 30
+    return Double(y)
+}
 
 functionTask_5_8(n: 3)
 func functionTask_5_7(n: Int) -> Double {
