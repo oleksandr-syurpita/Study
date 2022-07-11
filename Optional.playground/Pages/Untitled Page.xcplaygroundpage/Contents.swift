@@ -526,3 +526,34 @@ func functionH10(number: Int) -> Bool {
 functionH10(number: 923)
 
 print("#################")
+
+//func functionTask_4_4(n: Int) -> Int {
+////    Calculate sum: 5 - 10 + 20 - 40 + 80 - 160 + ... , where n is count of numbers
+//    guard n > 0 else { return 0 }
+//    var loop = 0
+//    var temp = 5
+//    var result = 0
+//    var isAdding = true
+//
+//    print("Start: \(temp)")
+//
+//    while n > loop {
+//
+//
+//        if isAdding == false {
+//            result -= temp
+//        }
+//        else {
+//            result += temp
+//        }
+//        temp *= 2
+//        isAdding.toggle()
+//        print("result: \(result)")
+//
+//        loop += 1
+//    }
+//    //    Calculate sum: 5 - 10 + 20 - 40 + 80 - 160 + ... , where n is count of numbers
+//
+//    return result
+//}
+//functionTask_4_4(n: 4)

@@ -70,37 +70,7 @@ func functionTask_4_3(n: Int) -> Double {
 functionTask_4_3(n: 5)
 print("^^^^^^^^^^^")
 
-//func functionTask_4_4(n: Int) -> Int {
-////    Calculate sum: 5 - 10 + 20 - 40 + 80 - 160 + ... , where n is count of numbers
-//    guard n > 0 else { return 0 }
-//    var loop = 0
-//    var temp = 5
-//    var result = 0
-//    var isAdding = true
-//
-//    print("Start: \(temp)")
-//
-//    while n > loop {
-//
-//
-//        if isAdding == false {
-//            result -= temp
-//        }
-//        else {
-//            result += temp
-//        }
-//        temp *= 2
-//        isAdding.toggle()
-//        print("result: \(result)")
-//
-//        loop += 1
-//    }
-//    //    Calculate sum: 5 - 10 + 20 - 40 + 80 - 160 + ... , where n is count of numbers
-//
-//    return result
-//}
-//functionTask_4_4(n: 4)
-func functionTask_4_4_1(n: Int) -> Int {
+func functionTask_4_4(n: Int) -> Int {
 //    Calculate sum: 5 - 10 + 20 - 40 + 80 - 160 + ... , where n is count of numbers
     guard n > 0 else { return 0 }
     var loop = 0
@@ -126,11 +96,11 @@ func functionTask_4_4_1(n: Int) -> Int {
 
     return result
 }
-functionTask_4_4_1(n: 4)
+functionTask_4_4(n: 4)
 
 func sumGeometricProgression(start: Double, step: Double, n: Int) -> Double {
     guard n > 0 else { return 0 }
-    
+//    Write function: `func sumGeometricProgression(start: Double, step: Double, n: Int) -> Double`, where start is the start number, step is the difference between two near numbers, n is count of numbers. Function should return its sum.
     
     var temp = start
     var loop = 0
